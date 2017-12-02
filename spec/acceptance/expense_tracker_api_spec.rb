@@ -8,7 +8,7 @@ module ExpenseTracker
 		include Rack::Test::Methods
 
 		def app
-			ExpenseTracker::API.new			
+			ExpenseTracker::API.new
 		end
 
 		def post_expense(expense)
@@ -27,13 +27,13 @@ module ExpenseTracker
 				'amount'	=> 5.75,
 				'date'		=> '2017-06-10'
 			)
-			
+
 			zoo = post_expense(
 				'payee'		=> 'Zoo',
 				'amount'	=> 15.25,
 				'date'		=> '2017-06-10'
 			)
-			
+
 			groceries = post_expense(
 				'payee'		=> 'Whole Foods',
 				'amount'	=> 95.20,
